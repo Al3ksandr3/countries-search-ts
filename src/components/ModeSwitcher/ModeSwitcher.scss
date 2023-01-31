@@ -9,16 +9,6 @@
   &__mode-label {
     font-size: 1.8rem;
     font-weight: 400;
-
-    &--light-mode {
-      @extend .mode-switcher__mode-label;
-      color: var(--main-font-color-for-light-mode);
-    }
-
-    &--dark-mode {
-      @extend .mode-switcher__mode-label;
-      color: var(--main-font-color-for-dark-mode);
-    }
   }
 
   &__mode-icon {

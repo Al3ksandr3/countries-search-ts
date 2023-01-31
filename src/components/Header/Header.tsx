@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className={headerClass}>
-      <h1 className="header__platform-name">Where is the world?</h1>
+      <h1 className="header__platform-name">Where in the world?</h1>
       <ModeSwitcher />
     </header>
   );

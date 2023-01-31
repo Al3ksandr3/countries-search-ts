@@ -1,6 +1,7 @@
 import "./App.scss";
 
 import Header from "../Header/Header";
+import Main from "../Main/Main";
 
 import { useGetCSSClassBasedOnThemeMode } from "../../hooks/useGetCSSClassBasedOnThemeMode";
 
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <div className={appClass}>
       <Header />
+      <Main />
     </div>
   );
 }
