@@ -2,10 +2,10 @@ import "./index.scss";
 
 import ReactDOM from "react-dom/client";
 
-import App from "./components/App/App";
+import Root from "./Root";
 
 const rootElement = document.querySelector("#root")!;
 
 const appRoot = ReactDOM.createRoot(rootElement);
 
-appRoot.render(<App />);
+appRoot.render(<Root />);

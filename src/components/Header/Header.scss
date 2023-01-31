@@ -5,19 +5,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  //   background-color: aquamarine;
+
+  &--light-mode {
+    @extend .header;
+    color: var(--main-font-color-for-light-mode);
+  }
+
+  &--dark-mode {
+    @extend .header;
+    color: var(--main-font-color-for-dark-mode);
+  }
 
   &__platform-name {
     font-size: 2.5rem;
-
-    &--light-mode {
-      @extend .header__platform-name;
-      color: var(--main-font-color-for-light-mode);
-    }
-
-    &--dark-mode {
-      @extend .header__platform-name;
-      color: var(--main-font-color-for-dark-mode);
-    }
   }
 }
