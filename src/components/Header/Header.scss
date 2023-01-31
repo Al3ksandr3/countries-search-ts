@@ -1,0 +1,23 @@
+.header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  //   background-color: aquamarine;
+
+  &__platform-name {
+    font-size: 2.5rem;
+
+    &--light-mode {
+      @extend .header__platform-name;
+      color: var(--main-font-color-for-light-mode);
+    }
+
+    &--dark-mode {
+      @extend .header__platform-name;
+      color: var(--main-font-color-for-dark-mode);
+    }
+  }
+}
