@@ -2,12 +2,12 @@ import "./Header.scss";
 
 import ModeSwitcher from "../ModeSwitcher/ModeSwitcher";
 
-import { useGetCSSClassBasedOnThemeMode } from "../../hooks/useGetCSSClassBasedOnThemeMode";
+import { useGetCSSClassesBasedOnThemeMode } from "../../hooks/useGetCSSClassesBasedOnThemeMode";
 
 //------ COMPONENT: START ------ //
 
 export default function Header() {
-  const headerClass = useGetCSSClassBasedOnThemeMode("header");
+  const [headerClass] = useGetCSSClassesBasedOnThemeMode("header");
 
   return (
     <header className={headerClass}>

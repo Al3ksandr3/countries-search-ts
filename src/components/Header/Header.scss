@@ -10,6 +10,7 @@
   &--light-mode {
     @extend .header;
     color: var(--secondary-font-color-for-light-mode);
+    box-shadow: var(--box-shadow-for-light-mode);
   }
 
   &--dark-mode {

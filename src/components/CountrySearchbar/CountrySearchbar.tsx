@@ -2,7 +2,7 @@ import "./CountrySearchbar.scss";
 
 import React from "react";
 
-import { useGetCSSClassBasedOnThemeMode } from "../../hooks/useGetCSSClassBasedOnThemeMode";
+import { useGetCSSClassesBasedOnThemeMode } from "../../hooks/useGetCSSClassesBasedOnThemeMode";
 
 import { CountrySearchbarProps } from "../../types/componentTypes";
 
@@ -15,18 +15,24 @@ export default function CountrySearchbar(props: CountrySearchbarProps) {
     props.searchQuerySetter(changeE.target.value);
   };
 
-  const searchIcon = useGetCSSClassBasedOnThemeMode("jkaskdha");
+  const [searchbarClass, searchbarInputClass, searchbarDelimiterClass] =
+    useGetCSSClassesBasedOnThemeMode(
+      "country-searchbar",
+      "country-searchbar__input",
+      "country-searchbar__delimiter"
+    );
 
   return (
-    <span className="country-searchbar">
+    <div className={searchbarClass}>
       <img className="country-searchbar__search-icon" />
+      <span className={searchbarDelimiterClass} />
       <input
-        className="country-searchbar__input"
+        className={searchbarInputClass}
         placeholder="Search for a country..."
         value={props.searchQuery}
         onChange={handleChange}
       />
-    </span>
+    </div>
   );
 }
 

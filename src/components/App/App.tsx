@@ -3,12 +3,12 @@ import "./App.scss";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 
-import { useGetCSSClassBasedOnThemeMode } from "../../hooks/useGetCSSClassBasedOnThemeMode";
+import { useGetCSSClassesBasedOnThemeMode } from "../../hooks/useGetCSSClassesBasedOnThemeMode";
 
 //------ COMPONENT: START ------ //
 
 export default function App() {
-  const appClass = useGetCSSClassBasedOnThemeMode("app");
+  const [appClass] = useGetCSSClassesBasedOnThemeMode("app");
 
   return (
     <div className={appClass}>
