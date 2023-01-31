@@ -1,6 +1,8 @@
 import "./CountrySearchbar.scss";
-
 import React from "react";
+
+import searchIconForLightMode from "./assets/search-icon--light-mode.svg";
+import searchIconForDarkMode from "./assets/search-icon--dark-mode.svg";
 
 import { useGetCSSClassesBasedOnThemeMode } from "../../hooks/useGetCSSClassesBasedOnThemeMode";
 

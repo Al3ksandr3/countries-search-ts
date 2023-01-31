@@ -3,23 +3,20 @@ import "./ModeSwitcher.scss";
 import modeIconForLightMode from "./assets/mode-icon--light-mode.svg";
 import modeIconForDarkMode from "./assets/mode-icon--dark-mode.svg";
 
-import { selectThemeMode } from "../../store/features/themeMode/themeModeSelectors";
-
-import { useSelector } from "react-redux";
-
-import { useThemeModeActions } from "./helpers";
+import { useThemeMode } from "../../hooks/useThemeMode";
+import { useGetIconBasedOnThemeMode } from "../../hooks/useGetIconBasedOnThemeMode";
 
 //------ COMPONENT: START ------ //
 
 export default function ModeSwitcher() {
-  const themeMode: string = useSelector(selectThemeMode);
+  const { currentThemeMode, handleThemeModeSwitch } = useThemeMode();
 
-  const { handleThemeModeSwitch } = useThemeModeActions(themeMode);
+  const modeLabel: string = currentThemeMode === "light" ? "Dark" : "Light";
 
-  const modeLabel: string = themeMode === "light" ? "Dark" : "Light";
-
-  const modeIcon: string =
-    themeMode === "light" ? modeIconForLightMode : modeIconForDarkMode;
+  const modeIcon: string = useGetIconBasedOnThemeMode(
+    modeIconForLightMode,
+    modeIconForDarkMode
+  );
 
   return (
     <span className="mode-switcher">
